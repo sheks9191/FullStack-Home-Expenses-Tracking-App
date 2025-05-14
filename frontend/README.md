@@ -1,8 +1,13 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Landing Page](src/readmeImg/App-Landing-Page.png)
+![Register Page](src/readmeImg/App-Register-Page.png)
+![Login page](src/readmeImg/App-Login-Page.png)
+![Line-Chart Expense](src/readmeImg/App-Chart-Expense-Page-Line.png)
+![Bar-Chart Expense](src/readmeImg/App-Chart-Expense-Page-Bar.png)
+![Line-Chart Income](src/readmeImg/App-Chart-Income-Page-Line.png)
+![Bar-Chart Income](src/readmeImg/App-Chart-Income-Page-Bar.png)
+![Income Page](src/readmeImg/App-Income-Page.png)
+![Expense Page](src/readmeImg/App-Expense-Page.png)
+![Expenses List](src/readmeImg/App-Expense-List.png)
+![alt text](src/readmeImg/App-Budget-Page.png)
+![Summary Page](src/readmeImg/App-Summary-Page.png)
+![Settings Page](src/readmeImg/App-Settings-Page.png)
