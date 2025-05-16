@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 // import { getUserFromLS } from "../features/ui/uiSlice";
 
 
-const appUrl = 'http://localhost:3000/api/v2';
+const appUrl = 'https://home-expenses-tracker-backend.onrender.com';
 
 export const customAPI = axios.create({
   baseURL:appUrl,
