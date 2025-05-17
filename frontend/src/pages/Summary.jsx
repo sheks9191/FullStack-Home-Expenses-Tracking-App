@@ -4,20 +4,24 @@ import { customAPI } from "../utils/utils"
 import SummaryComponent from "../components/SummaryComponent"
 
 const statsUrl = '/stats'
-const summaryQuery =(store) => {
+// const summaryQuery =(store) => {
   
-  return {
-    queryKey:['summary'],
-    queryFn:() => customAPI(statsUrl,{
+//   return {
+//     queryKey:['summary'],
+//     queryFn:() => customAPI(statsUrl,{
+//     headers:{
+//       authorization: `Bearer ${store.getState().ui.user.loginUserToken}`
+//     }
+//   })
+//   }
+// }
+
+export const loader = (store) => async () => {
+  const response = await customAPI(statsUrl,{
     headers:{
       authorization: `Bearer ${store.getState().ui.user.loginUserToken}`
     }
   })
-  }
-}
-
-export const loader = (queryClient,store) => async () => {
-  const response = await queryClient.ensureQueryData(summaryQuery(store))
   
   return response.data
 }
