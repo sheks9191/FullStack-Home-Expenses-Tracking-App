@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       {
         path:'incomes',
         element:<Incomes/>,
-        loader:incomeLoader(queryClient,store),
+        loader:incomeLoader(store),
       },
 
        {
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
         path:'budget',
         element:<Budget/>,
         action:budgetAction(store),
-        loader:budgetLoader(queryClient,store),
+        loader:budgetLoader(store),
 
       },
         {
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
         {
         path:'summary',
         element:<Summary/>,
-        loader:summaryLoader(queryClient,store),
+        loader:summaryLoader(store),
       },
 
     ]
