@@ -7,28 +7,33 @@ import { useLoaderData } from "react-router-dom"
 
 const incomeUrl = '/income'
 
-const incomesQuery =(params,store) => {
-  const {search,page,sort} = params
-  return {
-    queryKey:['incomes',search ?? '',page ?? '',sort ?? ''],
-    queryFn:() => customAPI.get(incomeUrl,{
-    params,
-    headers:{
-      authorization:`Bearer ${store.getState().ui.user.loginUserToken}`
-    }
-  })
-  }
-}
+// const incomesQuery =(params,store) => {
+//   const {search,page,sort} = params
+//   return {
+//     queryKey:['incomes',search ?? '',page ?? '',sort ?? ''],
+//     queryFn:() => customAPI.get(incomeUrl,{
+//     params,
+//     headers:{
+//       authorization:`Bearer ${store.getState().ui.user.loginUserToken}`
+//     }
+//   })
+//   }
+// }
 
 
 
-export const loader = (queryClient,store) => async ({request}) => {
+export const loader = (store) => async ({request}) => {
 
   const searchParam = new URL(request.url).searchParams.entries();
 
   const params = Object.fromEntries([...searchParam]);
 
-  const response = await queryClient.ensureQueryData(incomesQuery(params,store))
+  const response = await customAPI.get(incomeUrl,{
+    params,
+    headers:{
+      authorization:`Bearer ${store.getState().ui.user.loginUserToken}`
+    }
+  })
 
   return response.data
 }
