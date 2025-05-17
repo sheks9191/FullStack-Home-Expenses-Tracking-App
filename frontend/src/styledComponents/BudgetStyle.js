@@ -67,6 +67,7 @@ export const BudgetWrapper = styled.div `
   bottom:0px;
   right:0px;
   display:none;
+  cursor:pointer;
 }
 
 .delete-icon .btn-delete {
