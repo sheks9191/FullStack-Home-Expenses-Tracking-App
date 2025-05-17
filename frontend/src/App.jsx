@@ -89,7 +89,7 @@ const router = createBrowserRouter([
       {
         path:'expenses',
         element:<Expenses/>,
-        loader:expenseLoader(queryClient,store),
+        loader:expenseLoader(store),
 
       },
 
