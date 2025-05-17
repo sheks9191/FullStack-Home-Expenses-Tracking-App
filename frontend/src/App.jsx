@@ -39,7 +39,7 @@ const queryClient = new QueryClient({
 
 const router = createBrowserRouter([
   {
-    path:'stats/',
+    path:'/',
     element:<ProtectedRoutes>
         <AppLayout/>
       </ProtectedRoutes>,
@@ -126,7 +126,7 @@ const router = createBrowserRouter([
   },
 
     {
-    path:'/',
+    path:'/landing',
     element:<Landing/>,
     errorElement:<Error/>
   },
